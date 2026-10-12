@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHO AM I?</title>
+
+    <link rel="stylesheet" href="./css/basic.css">
+
+    <script src="./js/basic.js" defer></script>
+
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+</head>
+<body>
+
+<div class="dots-nav" id="dotsNav">
+    <div class="dot active" onclick="goToSlide(0)"></div>
+    <div class="dot" onclick="goToSlide(1)"></div>
+    <div class="dot" onclick="goToSlide(2)"></div>
+    <div class="dot" onclick="goToSlide(3)"></div>
+    <div class="dot" onclick="goToSlide(4)"></div>
+    <div class="dot" onclick="goToSlide(5)"></div>
+    <div class="dot" onclick="goToSlide(6)"></div>
+    <div class="dot" onclick="goToSlide(7)"></div>
+</div>
+
+<button class="nav-arrow" id="nextBtn" onclick="nextSlide()">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 10l5 5 5-5"/></svg>
+</button>
+
+<div class="slides-container" id="slidesContainer">
+
+    <!-- SLIDE 0: INTRODUCE -->
+    <section class="slide active">
+        <span class="tag">INTRODUCE</span>
+        <h1 class="title" style="font-size: 4.8rem;"><span class="highlight">: Collector</span></h1>
+        <p style="font-size: 1.6rem; font-weight: 800; color: var(--text-sub);">20262507 정준명</p>
+    </section>
+
+    <!-- SLIDE 1: COLLECT -->
+    <section class="slide">
+        <span class="tag">COLLECT 🏷️</span>
+        <h2 class="title"><span class="highlight">수집의 시작</span></h2>
+
+        <div class="photo-collage">
+            <div class="polaroid-card" style="--rot: -6deg;"><img src="./img/collect1.jpg" alt="전자기기"></div>
+            <div class="polaroid-card" style="--rot: 4deg;"><img src="./img/collect2.jpg" alt="만화책"></div>
+            <div class="polaroid-card" style="--rot: -3deg;"><img src="./img/collect3.jpg" alt="스티커"></div>
+            <div class="polaroid-card" style="--rot: 5deg;"><img src="./img/collect4.jpg" alt="가챠"></div>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: FILM -->
+    <section class="slide">
+        <span class="tag">FILM 🎞️</span>
+        <h2 class="title"><span class="highlight">필름으로 남기는 순간의 기록</span></h2>
+
+        <div class="film-grid-container">
+            <div class="film-photo-item"><img src="./img/film1.jpg" alt="일본 오사카"></div>
+            <div class="film-photo-item"><img src="./img/film2.png" alt="스페인 바르셀로나"></div>
+            <div class="film-photo-item"><img src="./img/film3.jpg" alt="양재 시민의 숲"></div>
+            <div class="film-photo-item"><img src="./img/film4.png" alt="독일 뮌헨"></div>
+            <div class="film-photo-item"><img src="./img/film5.png" alt="대만 타이베이"></div>
+            <div class="film-photo-item"><img src="./img/film6.png" alt="프랑스 파리"></div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: INDEPENDENT BOOKSTORE -->
+    <section class="slide">
+        <span class="tag">BOOKSTORE 📖</span>
+        <h2 class="title">독립서점에서 얻은 <span class="highlight">영감</span></h2>
+
+        <div class="book-visual-box">
+            <img src="./img/book.png" onerror="this.src='https://picsum.photos/300/400?random=99'" alt="독립서적">
+            <h2 style="font-size: 2.2rem; font-weight: 900; line-height: 1.35; text-align: left;">
+                누군가의 온전한 경험이<br><span class="highlight">한 권의 책</span>이 되는 순간
+            </h2>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: MY BOOK -->
+    <section class="slide">
+        <span class="tag">MY BOOK ✍️</span>
+        <h2 class="title">만들고 싶은 <span class="highlight">나만의 독립서적</span></h2>
+
+        <div class="future-cards-wrapper">
+            <div class="future-card">
+                <img src="./img/travel.png" alt="한달살이 여행일지">
+                <div class="future-card-title">✈️ 한달 여행일지</div>
+                <div class="future-card-sub">낯선 곳의 기록</div>
+            </div>
+            <div class="future-card">
+                <img src="./img/developer.jpg" alt="개발자 책">
+                <div class="future-card-title">💻 개발자 정보</div>
+                <div class="future-card-sub">개발 정보 공유</div>
+            </div>
+            <div class="future-card">
+                <img src="./img/doll.jpg" alt="원형사 책">
+                <div class="future-card-title">🎨 원형사 작업기</div>
+                <div class="future-card-sub">원형 제작 과정 기록</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: SUMMARY -->
+    <section class="slide">
+        <span class="tag">SUMMARY ✦</span>
+        <h2 class="title" style="font-size: 3.6rem; line-height: 1.35;">
+            “물건이 아닌,<br>
+            <span class="highlight">잊고 싶지 않은 순간</span>을 <br>모으는 사람”
+        </h2>
+    </section>
+
+    <!-- SLIDE 6: Q&A -->
+    <section class="slide">
+        <span class="tag">QUESTION 💬</span>
+        <div class="big-card">
+            <h1 style="font-size: 5.5rem; font-weight: 900;">Q & A</h1>
+        </div>
+    </section>
+
+    <!-- SLIDE 7: THANK YOU -->
+    <section class="slide slide-outro">
+        <div class="big-card" style="border-color: #1A1A1A; box-shadow: 14px 14px 0px #1A1A1A;">
+            <h1 style="font-size: 4.5rem; font-weight: 900; margin-bottom: 1rem;">감사합니다!</h1>
+            <p style="font-size: 1.5rem; font-weight: 800; color: var(--text-sub);">
+                📧 d2026m26@duksung.ac.kr<br>🍀 정준명
+            </p>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
