@@ -26,6 +26,15 @@ function updateActiveSlide(index) {
         if (i === index) dot.classList.add('active');
         else dot.classList.remove('active');
     });
+
+    const navIcon = document.getElementById('navIcon');
+    if (index === totalSlides - 1) {
+        // 위쪽 화살표 모양으로 변경
+        navIcon.innerHTML = '<path d="M7 14l5-5 5 5"/>';
+    } else {
+        // 다시 아래쪽 화살표 모양으로 변경
+        navIcon.innerHTML = '<path d="M7 10l5 5 5-5"/>';
+    }
 }
 
 container.addEventListener('scroll', () => {
